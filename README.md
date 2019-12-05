@@ -1,3 +1,5 @@
+![](https://github.com/lolo101/monic/workflows/Java%20CI/badge.svg)
+
 # monic
 
 Desktop utility that dynamically shows if your internet connexion is up or down
