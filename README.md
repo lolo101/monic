@@ -4,7 +4,7 @@ Desktop utility that dynamically shows if your internet connexion is up or down
 
 ## How to build
 
-Make sure you have Java 8+ and Maven installed then cd in the projet folder and run
+Make sure you have Java 8+ and Maven installed then cd in the project folder and run
 ```
 mvn package
 ```
@@ -14,16 +14,11 @@ mvn package
 ```
 java -jar target/monic-1.0.0-SNAPSHOT.jar [host (defaults to 'www.google.com')] [port (defaults to 80)]
 ```
-If you need to configure a proxy to connect to the host you will have to specify it on the command line
-```
-java -Dhttp.proxyHost=<your proxy host> -jar target/monic-1.0.0-SNAPSHOT.jar [host] [port]
-```
-
-The application will immediately open a socket to the host. Upon failure the application will retry every minute. Upon succes the application will not try again.
+The application will immediately open a socket to the host. Upon failure the application will retry every minute. Upon success the application will not try again.
 
 A red/green LED icon should show up in your system tray and reflect the connection status of the application.
 
-You can right-clic the icon to close the application.
+You can right-click the icon to close the application.
 
 ## Run without a desktop
 
@@ -36,4 +31,11 @@ Where logging.properties if a file in the working directory with following conte
 monic.Main.level=ALL
 monic.Main.handlers=java.util.logging.ConsoleHandler
 java.util.logging.ConsoleHandler.level=ALL
+```
+
+## Proxy configuration
+
+If you need to configure a proxy to connect to the host you will have to specify it on the command line
+```
+java -Dhttp.proxyHost=<your proxy host> -jar target/monic-1.0.0-SNAPSHOT.jar [host] [port]
 ```
